@@ -1,0 +1,49 @@
+---
+title: "plotly"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+```{r}
+library(tidyverse)
+library(plotly)
+library(p8105.datasets)
+```
+
+
+```{r}
+data("instacart")
+
+instacart = 
+  instacart %>% 
+  select(add_to_cart_order, order_dow, order_hour_of_day, aisle, department) %>% 
+  mutate(order_dow = recode(
+    order_dow,
+    "0" = "sunday",
+    "1" = "monday",
+    "2" = "tuesday",
+    "3" = "wednesday",
+    "4" = "thursday",
+    "5" = "friday",
+    "6" = "saturday")) 
+
+```
+
+
+```{r}
+instacart %>% 
+  group_by(order_dow, aisle) %>% 
+  summarise(mean_hour = mean(order_hour_of_day, na.rm = TRUE)) %>% 
+  mutate(order_dow = fct_reorder(order_dow, mean_hour)) %>% 
+  plot_ly(
+   x = ~ y = ~mean_hour, color = ~aisle,  type = "box", colors = "viridis")
+
+```
+
+
+```{r}
+group_by(aisle) %>% 
+  summarise(n = n()) %>% 
+  filter(n > 10000) %>% 
+  arrange(desc(n))
