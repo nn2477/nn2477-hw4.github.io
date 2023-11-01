@@ -112,8 +112,8 @@ Bachelor of Arts in Biology & Public Health, May 2020
 
 ### Skills
 
-**Software:** MS Excel, MS PowerPoint, R-Studio, SAS® Studio, Adobe LightRoom, Machine Learning
-
 **Wet Lab:** Immunofluorescence Microscopy, Western Blot, ELISA
 
 **Languages:** English, Vietnamese
+
+**Software:** R-Studio, SAS® Studio, Adobe LightRoom, Machine Learning
