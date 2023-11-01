@@ -17,6 +17,7 @@ output:
 
   + *Master of Public Health in Epidemiology & Health Policy* 
 
+
 * Macalester College, St. Paul, MN 
 
   + *Bachelor of Arts in Biology & Public Health* 
